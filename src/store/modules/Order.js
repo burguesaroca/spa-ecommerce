@@ -5,8 +5,8 @@ const state = {
 };
 
 const actions = {
-    getList({commit}, [pageNumber]){
-        axios.get("order/orders?page=" + pageNumber)
+    async getList({commit}, [pageNumber]){
+        await axios.get("/order/orders?page=" + pageNumber)
         .then ( response => {
             commit('SET_ORDER', response.data)
         }). catch (function (error){
