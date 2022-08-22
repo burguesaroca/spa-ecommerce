@@ -5,8 +5,8 @@ const state = {
 };
 
 const actions = {
-    getList({commit}, [pageNumber, search]){
-        axios.get("/products?page=" + pageNumber + "&search="+ search)
+    async getList({commit}, [pageNumber, search]){
+        await axios.get("/products?page=" + pageNumber + "&search="+ search)
         .then ( response => {
             commit('SET_PRODUCT', response.data)
         }). catch (function (error){
