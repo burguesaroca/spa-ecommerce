@@ -1,24 +1,13 @@
-# vue-spa
+FRONTEND
+instalación previa: instalar node js.
 
-## Project setup
-```
-npm install
-```
+1. git clone https://github.com/burguesaroca/spa-ecommerce.git
+2. cd spa-ecommerce
+3. npm i
+4. cp .env.example .env
+5. configurar variables de entorno en el .env
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+VUE_APP_APLICATION = 1
+VUE_APP_SERVIDOR = http://localhost:8080/ecommerce/public/api/
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+6. npm run serve -- --port 3000
